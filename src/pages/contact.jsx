@@ -4,14 +4,14 @@ const Contact = () => {
     const [message, setMessage] = useState('');
 
     const Admin = () => {
-        return <p>Welcome Admin</p>;
+        return <p>Welcome Admin!!!</p>;
     };
 
     const User = () => {
         return <p>Welcome User!!!</p>;
     };
     
-    const updateData = () => {
+    const UpdateData = () => {
         const welcomeMessage = (document.getElementById("userName").value) === "Snigdha" ? <Admin /> : <User />;
         setMessage(welcomeMessage);
     };   
@@ -22,7 +22,7 @@ const Contact = () => {
                 <h1>{message}</h1>
                 <label>Please Enter Your Username</label>
                 <input type="text"  id="userName" required/>
-                <button onClick={updateData}>Click Here</button>
+                <button onClick={UpdateData}>Click Here</button>
             </div>
         </>
     );
