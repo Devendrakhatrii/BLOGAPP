@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Contact = () => {
-    const [data, newData] = useState('');
+    const [message, setMessage] = useState('');
 
     const Admin = () => {
         return <p>Welcome Admin</p>;
@@ -10,18 +10,18 @@ const Contact = () => {
     const User = () => {
         return <p>Welcome User!!!</p>;
     };
-
+    
     const updateData = () => {
-        const inputName = document.getElementById("userName").value;
-        const welcomeMessage = inputName === "Snigdha" ? <Admin /> : <User />;
-        newData(welcomeMessage);
-    };  
+        const welcomeMessage = (document.getElementById("userName").value) === "Snigdha" ? <Admin /> : <User />;
+        setMessage(welcomeMessage);
+    };   
 
     return (
         <>
             <div className="Contact">
-                <h1>{data}</h1>
-                <input type="text" required id="userName" />
+                <h1>{message}</h1>
+                <label>Please Enter Your Username</label>
+                <input type="text"  id="userName" required/>
                 <button onClick={updateData}>Click Here</button>
             </div>
         </>
