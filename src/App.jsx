@@ -1,8 +1,9 @@
-import Contact from "./pages/contact";
-import Home from "./pages/home";
-import { About } from "./about";
-import Practice from "./pages/practice"
-import Button from "./pages/button";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Question from "./pages/Questions";
+import Practice from "./pages/Practice";
+import Button from "./pages/Button";
+import UseEff from "./pages/UseEff";
 
 const App = () => {
   const users = [{name:'Snigdha', age:21},{name:'Ram', age: 22},{name:'Hari', age:19}]
@@ -17,7 +18,9 @@ const App = () => {
    <Practice isGoal = {2} />
    <hr></hr>
    <Button/>
-  
+   <hr></hr>
+   <Question/>
+  <UseEff/>
   </>
 
  
