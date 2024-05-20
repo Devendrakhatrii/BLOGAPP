@@ -1,30 +1,36 @@
 import React from 'react'
 
-const  table = () => {
+const  Table = (header,body) => {
   return (
     <div>
-        <table>
+        <table border = {1}>
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Age:</th>
+            {header.map((item,index) => {
+                return <th key = {index}>{item}</th>;
+            })}
         </tr>
     </thead>
     <tbody>
-        {data.length > 0 ? (
-            data.map((user,index) => {
+        {body.length > 0 ? (
+            body.map((item,index) => {
                 return (
                     <tr key = {index}>
-                    <td>{user.name}</td>
-                    <td>{user.age}</td>
+                    <td>{item.id}</td>
+                    <td>{item.title}</td>
+                    <td>{item.body}</td>
+                    <td>{item.userId}</td>
+                    <td>{item.tags}</td>
+                    <td>{item.reaction}</td>
+                    
                 </tr>
                 );
 
             })
         ):(
             <tr>
-                <td colSpan = {2} style = {{textAlign:"center"}}>
-                    No Data
+                <td colSpan = {header.length} style = {{textAlign:"center"}}>
+                    No body
                     </td>
             </tr>
         ) }
@@ -33,6 +39,5 @@ const  table = () => {
 </table>
     </div>
   )
-}
-
-export default table;
+};
+export default Table;

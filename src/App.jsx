@@ -4,6 +4,7 @@ import Question from "./pages/Questions";
 import Practice from "./pages/Practice";
 import Button from "./pages/Button";
 import UseEff from "./pages/UseEff";
+import Table from "./components/table";
 
 const App = () => {
   const users = [{name:'Snigdha', age:21},{name:'Ram', age: 22},{name:'Hari', age:19}]
@@ -13,14 +14,13 @@ const App = () => {
    <hr/>
    <Home data= {users}/>
    <hr/>
-   <About title = "CONTACT INFORMATION" description= "Please enter your valid information" contactno = "ENter your contact number"/>
-   <hr></hr>
    <Practice isGoal = {2} />
    <hr></hr>
    <Button/>
    <hr></hr>
    <Question/>
   <UseEff/>
+  <Table/>
   </>
 
  

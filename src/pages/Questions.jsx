@@ -10,12 +10,6 @@ const Question = () => {
     const [city, setCity] = useState("")
   return (
     <div>
-        <select>
-            {countries.name.map(country => {
-                return <option>{country}</option>
-            }
-            )}
-        </select>
     </div>  
   )
 }

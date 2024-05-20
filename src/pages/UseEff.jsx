@@ -1,5 +1,6 @@
-import {useEffect, useState} from React;
+import {useEffect, useState} from 'react';
 import axios from "axios";
+
 
 const useEff = () => {
     const [post, setPost] = useState([]);
@@ -17,7 +18,10 @@ useEffect(() => {
     fetchData();
 }, []);
 
-return <div>{JSON.stringify(post)}</div>
-
-};
-export default useEff;
+return <div> {post.length > 0 && (<Table header = {["id","title","body","userId","tags","reaction"]}
+data = {post}
+/>
+)}
+</div>
+}
+export default useEff;  
