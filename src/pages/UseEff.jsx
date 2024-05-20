@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import axios from "axios";
+import Table from '../components/Table';
 
 
 const useEff = () => {
@@ -8,8 +9,8 @@ const useEff = () => {
 useEffect(() => {
     const fetchData = async () =>{
         try{
-            const {data} = await axios("https://dummyjson.com/posts");
-            setPost(data.posts);
+            const {body} = await axios("https://dummyjson.com/posts");
+            setPost(body.posts);
         }
         catch(e){
             console.log(e);
@@ -19,7 +20,7 @@ useEffect(() => {
 }, []);
 
 return <div> {post.length > 0 && (<Table header = {["id","title","body","userId","tags","reaction"]}
-data = {post}
+body = {post}
 />
 )}
 </div>

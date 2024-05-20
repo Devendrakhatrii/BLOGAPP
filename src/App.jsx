@@ -4,7 +4,7 @@ import Question from "./pages/Questions";
 import Practice from "./pages/Practice";
 import Button from "./pages/Button";
 import UseEff from "./pages/UseEff";
-import Table from "./components/table";
+
 
 const App = () => {
   const users = [{name:'Snigdha', age:21},{name:'Ram', age: 22},{name:'Hari', age:19}]
@@ -20,7 +20,6 @@ const App = () => {
    <hr></hr>
    <Question/>
   <UseEff/>
-  <Table/>
   </>
 
  
